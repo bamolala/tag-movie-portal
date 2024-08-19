@@ -8,4 +8,4 @@ function ErrorAlert({error, searchTerm}) {
   }
   
   export default ErrorAlert;
-    
+  

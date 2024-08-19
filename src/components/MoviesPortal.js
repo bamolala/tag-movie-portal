@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { fetchMovies } from "../api/fetchMovies";
 import ErrorAlert from "./ErrorAlert";

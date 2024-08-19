@@ -7,16 +7,16 @@ export const fetchMovies = async (searchText, moviesCallback, errorCallback, fin
             const movieDetailsPromises = data.Search.map((movie) => fetchMovieDetails(movie.imdbID, errorCallback));
             const movieDetails = await Promise.all(movieDetailsPromises);
 
-            console.log(data.Search)
-            moviesCallback(data.Search);
+            moviesCallback(movieDetails);
             errorCallback(null);
         } else {
-           moviesCallback([]);
-           errorCallback(data.Error); 
+            moviesCallback([]);
+            errorCallback(data.Error);
         }
     } catch (err) {
-        errorCallback('An error occured while fetching data.');
-    } finally{
+        moviesCallback([]);
+        errorCallback('An error occurred while fetching data.');
+    } finally {
         finallyCallback()
     }
 };

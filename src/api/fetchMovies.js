@@ -1,7 +1,7 @@
 export const fetchMovies = async (searchText, moviesCallback, errorCallback, finallyCallback) => {
     console.log({searchText, moviesCallback, errorCallback, finallyCallback}, "inside"); 
     try {
-        const response = await fetch(`http://www.omdbapi.com/?s=${searchText}&apikey=b1ef107e&type=movie`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${searchText}&apikey=b1ef107e&type=movie`);
         const data = await response.json();
         console.log({response})
         if (data.Response === 'True') {

@@ -11,6 +11,7 @@ function MoviesPortal() {
 
     const onSearchTextEnter = (e) => {
         e.preventDefault();
+        console.log({searchInputText, setMovies, setError});
         fetchMovies(searchInputText, setMovies, setError, () => setEnteredSearchText(searchInputText))
     };
 

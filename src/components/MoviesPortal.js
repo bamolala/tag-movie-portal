@@ -32,7 +32,7 @@ function MoviesPortal() {
             {error && <ErrorAlert error={error} searchTerm={enteredSearchText}/>}
             {movies.length > 0 &&  <p className='text-light'>Showing {movies.length} Movies for '{enteredSearchText}'</p>}
             {movies.map((movie) => (
-                <MovieDetail key={movie.imdbID} movie={movie} />
+                <MovieDetail key={movie && movie.imdbID} movie={movie} />
             ))}
         </>
     );

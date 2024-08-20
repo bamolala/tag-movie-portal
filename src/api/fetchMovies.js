@@ -26,7 +26,7 @@ export const fetchMovies = async (searchText, moviesCallback, errorCallback, fin
 const fetchMovieDetails = async (id, errorCallback) => {
     console.log({id})
     try {
-        const response = await fetch(`http://www.omdbapi.com/?i=${id}&plot=full&apikey=b1ef107e`);
+        const response = await fetch(`https://www.omdbapi.com/?i=${id}&plot=full&apikey=b1ef107e`);
         console.log({response})
         const data = await response.json();
 
